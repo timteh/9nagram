@@ -21,6 +21,8 @@ def convertToListFromFile(filePath):
     return result
 # -------------------------------------------------
 #              Sort Letters in a word
+#        e.g.  Singapore -> aeginoprs
+#               Shanghai -> aaghhins
 # -------------------------------------------------
 def sortLetters(strWord):
     # convert to lower case before sorting
@@ -33,8 +35,8 @@ def sortLetters(strWord):
     return finalStr
 # -------------------------------------------------
 #      Create a dictionary with sorted letters
-#      e.g. microsoft -> cfimorst [key]
-#               apple -> aelpp [key]
+#      e.g. microsoft -> cfimoorst [key]
+#               apple -> aelpp     [key]
 # -------------------------------------------------
 def createDictFromList(wordList):
     result = dict()
