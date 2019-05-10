@@ -34,7 +34,7 @@ def sortLetters(strWord):
 # -------------------------------------------------
 #      Create a dictionary with sorted letters
 #      e.g. microsoft -> cfimorst [key]
-#               apple -> aelp [key]
+#               apple -> aelpp [key]
 # -------------------------------------------------
 def createDictFromList(wordList):
     result = dict()
