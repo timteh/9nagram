@@ -39,7 +39,7 @@ def sortLetters(strWord):
 def createDictFromList(wordList):
     result = dict()
     for word in wordList:
-        # eliminate \n and lowercase
+        # eliminate \n
         word = word.strip()
         # Let sorted letters be the key
         result[sortLetters(word)] = word
