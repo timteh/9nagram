@@ -44,7 +44,12 @@ def createDictFromList(wordList):
         # eliminate \n
         word = word.strip()
         # Let sorted letters be the key
-        result[sortLetters(word)] = word
+        if (result.get(sortLetters(word)) == None):
+            tempList = list()
+        else:
+            tempList = result[sortLetters(word)]
+        tempList.append(word)
+        result[sortLetters(word)] = tempList
     #print (result)
     return result
 # -------------------------------------------------
@@ -52,4 +57,13 @@ def createDictFromList(wordList):
 # -------------------------------------------------
 def findWordFromDict(strWord,anagramDict):
     strWord = sortLetters(strWord)
-    return anagramDict.get(strWord)
+    if (anagramDict.get(strWord) == None):
+        print ('Not Found...')
+    else:
+        printList(anagramDict.get(strWord))
+# -------------------------------------------------
+#             Print elements in a list
+# -------------------------------------------------
+def printList(tempList):
+    for item in tempList:
+        print (item)
